@@ -1,3 +1,4 @@
+### the script embedded 4 pdf format papers and upsert into pinecone
 import os
 from pinecone import Pinecone
 from pinecone import ServerlessSpec
