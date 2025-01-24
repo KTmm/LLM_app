@@ -12,6 +12,7 @@ if not os.getenv("RUNNING_IN_PRODUCTION"):
     db_path = os.path.join(os.path.dirname(__file__), 'app.db')
     print("DB path:", db_path)
     db_uri = 'sqlite:///{}'.format(db_path)
+    print(db_uri)
 else:
     app.logger.setLevel(logging.INFO)
     db_uri = 'mysql://root@localhost/chatbot_app'
