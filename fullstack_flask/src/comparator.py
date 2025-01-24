@@ -69,12 +69,6 @@ def compare_paper(target_paper, validate_paper):
         "of the experimental process and the main results as well as the conclusions."
     )
 
-                # summary_query = (
-    #     "Please provide a concise summary of Paper A's key experiments, "
-    #     "covering the experimental process, main results, and any notable conclusions. "
-    #     "Focus on the mannose-6-phosphate (M6P) pathway if mentioned."
-    # )
-
     summary = qa_extract_experiments.run(summary_query)
     print("=== Summary of Paper A's Key Experiments ===")
     print(summary)
@@ -89,16 +83,6 @@ def compare_paper(target_paper, validate_paper):
     print("=== Does Paper B Reproduce/Validate Paper A's Key Experiments? ===")
     print(validation_response)
     print("==================================================================")
-
-    # retrieval_chain = (
-    #     {
-    #         "context": retriever.with_config(run_name="Docs"),
-    #         "question": RunnablePassthrough(),
-    #     }
-    #     | prompt
-    #     | llm
-    #     | StrOutputParser()
-    # )
 
     return validation_response
 

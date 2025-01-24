@@ -163,7 +163,6 @@
             let assistMessageDiv = assistantClone.querySelector(".message-content");
             messagesContainer.appendChild(assistantClone);
 
-            //Simulate or handle a server response here, e.g.:
             try {
                 const response = await fetch("/chat", {
                 method: "POST",
